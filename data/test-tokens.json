@@ -1,0 +1,43 @@
+{
+  "tokens": [
+    "TGaxQR6RmfkL9qhZzh8fF83dDLjnJBfVva",
+    "TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj"
+  ],
+  "cErc20Delegate": [
+    "TMUBbv9aEauXNmga1wU3rwKWDgXkWgvRAd",
+    "TFJWagiFqF7UGv8Wcq4vaKV2n3KCeyXRKQ"
+  ],
+  "CEther": {
+    "address": "TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW",
+    "exchangeRate": "200000000000000000000000000",
+    "reserveFactor": "200000000000000000",
+    "name": "CEther",
+    "symbol": "CEther",
+    "decimals": 18,
+    "interestRateModel": "TULa2nWyFvJiPbvogDJUtzU6b9KDHFzBvz",
+    "collateralFactor": "80000000000000000"
+  },
+  "tokenConfig": [
+    {
+      "name": "Uruz URZ",
+      "symbol": "uURZ",
+      "interestRateModel": "THEUD8rfAkmeUgSJs8X8zN6wqNYDG71iPx",
+      "exchangeRate": "200000000000000000000000000",
+      "decimals": "18",
+      "reserveFactor": "150000000000000000",
+      "priceOracleV1Key": "0x1",
+      "collateralFactor": "70000000000000000"
+    },
+    {
+      "name": "Uruz USDT",
+      "symbol": "uUSDT",
+      "interestRateModel": "TRWMtAJPFuDzfHW4itx29kzZs91eXojXaf",
+      "exchangeRate": "300000000000000000000000000",
+      "decimals": "18",
+      "reserveFactor": "100000000000000000",
+      "priceOracleV1Key": "0x2",
+      "collateralFactor": "60000000000000000"
+    }
+  ],
+  "CErc20Delegator": []
+}
