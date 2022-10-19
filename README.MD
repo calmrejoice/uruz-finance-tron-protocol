@@ -45,3 +45,6 @@ URZ CErc20Delegator [TVxb8THh3V7LKMyamG5tX46Eb5rqxYTCG8](https://nile.tronscan.o
 
 USDT CErc20Delegate [TFJWagiFqF7UGv8Wcq4vaKV2n3KCeyXRKQ](https://nile.tronscan.org/#/contract/TFJWagiFqF7UGv8Wcq4vaKV2n3KCeyXRKQ)
 USDT CErc20Delegator [TAZh2JdxuiXZrwWoxWSRznpqZgcK1rueXP](https://nile.tronscan.org/#/contract/TAZh2JdxuiXZrwWoxWSRznpqZgcK1rueXP)
+
+PriceOracle [TMDVSLJ4gmzxmZ87YDLeVBsxQizf9aSFaA](https://nile.tronscan.org/#/contract/TMDVSLJ4gmzxmZ87YDLeVBsxQizf9aSFaA)
+PriceOracleProxy [TAaT2kumYb9vP4DGaK8CCktj6XAwWKbY12](https://nile.tronscan.org/#/contract/TAaT2kumYb9vP4DGaK8CCktj6XAwWKbY12)

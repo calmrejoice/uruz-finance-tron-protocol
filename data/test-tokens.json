@@ -39,5 +39,8 @@
       "collateralFactor": "60000000000000000"
     }
   ],
-  "CErc20Delegator": []
+  "CErc20Delegator": [
+    "TVxb8THh3V7LKMyamG5tX46Eb5rqxYTCG8",
+    "TAZh2JdxuiXZrwWoxWSRznpqZgcK1rueXP"
+  ]
 }
