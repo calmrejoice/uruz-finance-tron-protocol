@@ -70,40 +70,40 @@ const main = async () => {
     comptrollerAbi
   );
 
-  // Set Comptroller Basic Setting
-  console.log(
-    JSON.stringify(await setPriceOracle(comptrollerContract, oracleAddress))
-  );
-  console.log(await setMaxAssets(comptrollerContract, 10));
-  console.log(
-    await setLiquidationIncentive(comptrollerContract, "1080000000000000000")
-  );
-  console.log(await setCloseFactor(comptrollerContract, "500000000000000000"));
+  // // Set Comptroller Basic Setting
+  // console.log(
+  //   JSON.stringify(await setPriceOracle(comptrollerContract, oracleAddress))
+  // );
+  // console.log(await setMaxAssets(comptrollerContract, 10));
+  // console.log(
+  //   await setLiquidationIncentive(comptrollerContract, "1080000000000000000")
+  // );
+  // console.log(await setCloseFactor(comptrollerContract, "500000000000000000"));
 
   // // Add Tokens
-  const cTokens = [...CErc20Delegator, CEther.address];
-  const addMarketsPromise = cTokens.map(async (t) => {
-    return await addMarket(comptrollerContract, t);
-  });
-  await Promise.all(addMarketsPromise);
+  // const cTokens = [...CErc20Delegator, CEther.address];
+  // const addMarketsPromise = cTokens.map(async (t) => {
+  //   return await addMarket(comptrollerContract, t);
+  // });
+  // await Promise.all(addMarketsPromise);
 
   // // Set CollateralFactor Individually
-  console.log(
-    await setCollateralFactor(
-      comptrollerContract,
-      CEther.address,
-      CEther.collateralFactor
-    )
-  );
-  for (let i = 0; i < CErc20Delegator.length; i++) {
-    console.log(
-      await setCollateralFactor(
-        comptrollerContract,
-        CErc20Delegator[i],
-        tokenConfig[i].collateralFactor
-      )
-    );
-  }
+  // console.log(
+  //   await setCollateralFactor(
+  //     comptrollerContract,
+  //     CEther.address,
+  //     CEther.collateralFactor
+  //   )
+  // );
+  // for (let i = 0; i < CErc20Delegator.length; i++) {
+  //   console.log(
+  //     await setCollateralFactor(
+  //       comptrollerContract,
+  //       CErc20Delegator[i],
+  //       tokenConfig[i].collateralFactor
+  //     )
+  //   );
+  // }
 };
 
 main();

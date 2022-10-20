@@ -19,6 +19,5 @@ module.exports = async function (deployer) {
   const timelock = await Timelock.deployed();
 
   await wurz.setGovernorAlpha(GovernorAlpha.address);
-  console.log(governorAlpha);
   // await governorAlpha.setTimelock(timelock.address); bug, cant execute this function, need to go to tronscan
 };
