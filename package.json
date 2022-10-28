@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bignumber.js": "^9.1.0",
     "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
     "tronweb": "^4.4.0"
   }
 }

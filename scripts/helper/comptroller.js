@@ -47,14 +47,15 @@ const main = async () => {
   //   )}`
   // );
 
-  // const markets = await getAllMarkets(comptrollerContract);
-  // console.log(
-  //   `Markets: ${JSON.stringify(markets.map((v) => nile.address.fromHex(v)))}`
-  // );
+  const markets = await getAllMarkets(comptrollerContract);
+  console.log(
+    `Markets: ${JSON.stringify(markets.map((v) => nile.address.fromHex(v)))}`
+  );
 
-  const tokens = [...CErc20Delegator, CEther.address];
-  const marketData = await getAllMarketData(comptrollerContract, tokens);
-  console.log(`Market Data: ${JSON.stringify(marketData)}`);
+  // const tokens = [...CErc20Delegator, CEther.address];
+  // const marketData = await getAllMarketData(comptrollerContract, tokens);
+  // console.log(marketData);
+  // console.log(`Market Data: ${JSON.stringify(marketData)}`);
 };
 
 main();

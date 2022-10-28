@@ -130,10 +130,10 @@ contract CTokenInterface is CTokenStorage {
 
     /*** Market Events ***/
 
-    event JTokenStatus(uint totalCash, uint totalBorrow, uint totalReserve, uint totalSupply, uint borrowRatePerBlock, uint borrowIndex, uint reserveFactorMantissa);
+    event UTokenStatus(uint totalCash, uint totalBorrow, uint totalReserve, uint totalSupply, uint borrowRatePerBlock, uint borrowIndex, uint reserveFactorMantissa);
 
 
-    event JTokenBalance(address user, uint jtoken_balance);
+    event UTokenBalance(address user, uint utoken_balance);
 
 
     /**

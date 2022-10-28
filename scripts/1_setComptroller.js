@@ -5,12 +5,13 @@ const {
   unitroller: comptrollerAddress,
 } = require("../data/test-comptroller.json");
 const { oracle: oracleAddress } = require("../data/test-oracle.json");
-const {
-  CErc20Delegator,
-  CEther,
-  tokenConfig,
-} = require("../data/test-tokens.json");
+// const {
+//   CErc20Delegator,
+//   CEther,
+//   tokenConfig,
+// } = require("../data/test-tokens.json");
 const { abi: comptrollerAbi } = require("../build/contracts/Comptroller.json");
+const { CErc20Delegator } = require("../data/tokensData");
 
 const getComptrollerContract = async (unitroller, abi) => {
   return await nile.contract(abi, unitroller);
@@ -80,12 +81,14 @@ const main = async () => {
   // );
   // console.log(await setCloseFactor(comptrollerContract, "500000000000000000"));
 
-  // // Add Tokens
+  // Add Tokens
   // const cTokens = [...CErc20Delegator, CEther.address];
   // const addMarketsPromise = cTokens.map(async (t) => {
   //   return await addMarket(comptrollerContract, t);
   // });
   // await Promise.all(addMarketsPromise);
+
+  await addMarket(comptrollerContract, CErc20Delegator[0]);
 
   // // Set CollateralFactor Individually
   // console.log(

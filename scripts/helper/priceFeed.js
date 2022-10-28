@@ -2,7 +2,7 @@ const { mainnet } = require("../utils/tronWeb");
 
 const priceFeeds = require("../../data/test-pricefeed.json");
 
-const main = async () => {
+const getPricesPriceFeeds = async () => {
   for (feed in priceFeeds) {
     const contract = await mainnet.contract().at(priceFeeds[feed]);
     const price = await contract.latestAnswer().call();
@@ -10,9 +10,12 @@ const main = async () => {
   }
 };
 
+const main = async () => {
+  await getPricesPriceFeeds();
+};
+
 module.exports = {
-  getTrxUsdPrice,
-  getBtcUsdPrice,
+  getPricesPriceFeeds,
 };
 
 main();

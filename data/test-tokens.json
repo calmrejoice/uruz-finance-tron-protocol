@@ -8,12 +8,12 @@
     "TFJWagiFqF7UGv8Wcq4vaKV2n3KCeyXRKQ"
   ],
   "CEther": {
-    "address": "TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW",
-    "exchangeRate": "200000000000000000000000000",
-    "reserveFactor": "200000000000000000",
-    "name": "CEther",
-    "symbol": "CEther",
-    "decimals": 18,
+    "address": "TGjZXu9amnEfiUy3W8Z1ptxKnTVs6cb9vv",
+    "exchangeRate": "101978605025782",
+    "reserveFactor": "100000000000000000",
+    "name": "Uruz TRX",
+    "symbol": "uTRX",
+    "decimals": 8,
     "interestRateModel": "TULa2nWyFvJiPbvogDJUtzU6b9KDHFzBvz",
     "collateralFactor": "80000000000000000"
   },
@@ -23,7 +23,7 @@
       "symbol": "uURZ",
       "interestRateModel": "THEUD8rfAkmeUgSJs8X8zN6wqNYDG71iPx",
       "exchangeRate": "200000000000000000000000000",
-      "decimals": "18",
+      "decimals": "8",
       "reserveFactor": "150000000000000000",
       "priceOracleV1Key": "0x1",
       "collateralFactor": "70000000000000000"
@@ -33,7 +33,7 @@
       "symbol": "uUSDT",
       "interestRateModel": "TRWMtAJPFuDzfHW4itx29kzZs91eXojXaf",
       "exchangeRate": "300000000000000000000000000",
-      "decimals": "18",
+      "decimals": "8",
       "reserveFactor": "100000000000000000",
       "priceOracleV1Key": "0x2",
       "collateralFactor": "60000000000000000"

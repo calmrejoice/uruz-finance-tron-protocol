@@ -38,13 +38,20 @@ jumpRate URZ JumpRateModelV2 [THEUD8rfAkmeUgSJs8X8zN6wqNYDG71iPx](https://nile.t
 
 jumpRate USDT JumpRateModelV2 [TRWMtAJPFuDzfHW4itx29kzZs91eXojXaf](https://nile.tronscan.org/#/contract/TRWMtAJPFuDzfHW4itx29kzZs91eXojXaf)
 
-TRX CEther [TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW](https://nile.tronscan.org/#/contract/TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW)
+<!-- TRX CEther [TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW](https://nile.tronscan.org/#/contract/TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW) -->
 
-URZ CErc20Delegate [TMUBbv9aEauXNmga1wU3rwKWDgXkWgvRAd](https://nile.tronscan.org/#/contract/TMUBbv9aEauXNmga1wU3rwKWDgXkWgvRAd)
-URZ CErc20Delegator [TVxb8THh3V7LKMyamG5tX46Eb5rqxYTCG8](https://nile.tronscan.org/#/contract/TVxb8THh3V7LKMyamG5tX46Eb5rqxYTCG8)
+TRX CEther [TGjZXu9amnEfiUy3W8Z1ptxKnTVs6cb9vv](https://nile.tronscan.org/#/contract/TGjZXu9amnEfiUy3W8Z1ptxKnTVs6cb9vv)
+
+<!-- URZ CErc20Delegate [TMUBbv9aEauXNmga1wU3rwKWDgXkWgvRAd](https://nile.tronscan.org/#/contract/TMUBbv9aEauXNmga1wU3rwKWDgXkWgvRAd)
+URZ CErc20Delegator [TVxb8THh3V7LKMyamG5tX46Eb5rqxYTCG8](https://nile.tronscan.org/#/contract/TVxb8THh3V7LKMyamG5tX46Eb5rqxYTCG8) -->
+
+URZ CErc20Delegate [TS5aDYKwCZNVyVVQBnRUUnbfU9N7Q9isCY](https://nile.tronscan.org/#/contract/TS5aDYKwCZNVyVVQBnRUUnbfU9N7Q9isCY)
+URZ CErc20Delegator [TByuWrmpZQb5yYYtWBrT4Kfhzz3jJ1GQ4E](https://nile.tronscan.org/#/contract/TByuWrmpZQb5yYYtWBrT4Kfhzz3jJ1GQ4E)
 
 USDT CErc20Delegate [TFJWagiFqF7UGv8Wcq4vaKV2n3KCeyXRKQ](https://nile.tronscan.org/#/contract/TFJWagiFqF7UGv8Wcq4vaKV2n3KCeyXRKQ)
 USDT CErc20Delegator [TAZh2JdxuiXZrwWoxWSRznpqZgcK1rueXP](https://nile.tronscan.org/#/contract/TAZh2JdxuiXZrwWoxWSRznpqZgcK1rueXP)
 
 PriceOracle [TMDVSLJ4gmzxmZ87YDLeVBsxQizf9aSFaA](https://nile.tronscan.org/#/contract/TMDVSLJ4gmzxmZ87YDLeVBsxQizf9aSFaA)
 PriceOracleProxy [TAaT2kumYb9vP4DGaK8CCktj6XAwWKbY12](https://nile.tronscan.org/#/contract/TAaT2kumYb9vP4DGaK8CCktj6XAwWKbY12)
+
+UruzLens [TB7ictoxTENyjCA2RmDwN8XfF635zZthfF](https://nile.tronscan.org/#/contract/TB7ictoxTENyjCA2RmDwN8XfF635zZthfF)

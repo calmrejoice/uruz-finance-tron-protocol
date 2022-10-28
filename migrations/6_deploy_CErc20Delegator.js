@@ -1,21 +1,18 @@
-const tokenData = require("../data/test-tokens.json");
+const {
+  cErc20Delegate,
+  tokenConfig,
+  underlyingTokens,
+} = require("../data/tokensData.js");
 const { unitroller } = require("../data/test-comptroller.json");
 require("dotenv").config();
 
 const cErc20Delegator = artifacts.require("./CErc20Delegator.sol");
-const cErc20Delegate = tokenData.cErc20Delegate;
-const tokens = tokenData.tokens;
-const tokenConfig = tokenData.tokenConfig;
 
 module.exports = async (deployer) => {
   const cErc20DelegateDeployer = cErc20Delegate.map(async (v, i) => {
-    console.log(`Deploying ${i} of cErc20Delegate...`);
-    console.log(`Underlying Address: ${tokens[i]}`);
-    console.log(`TokenConfig: ${JSON.stringify(tokenConfig[i])}`);
-
     await deployer.deploy(
       cErc20Delegator,
-      tokens[i],
+      underlyingTokens[i],
       unitroller,
       tokenConfig[i].interestRateModel,
       tokenConfig[i].exchangeRate,
