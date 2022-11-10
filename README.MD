@@ -32,7 +32,9 @@ GovernorAlpha [TMCYfGnLv3fwFt3cRpkZr76DgMgGr5jDJb](https://nile.tronscan.org/#/c
 
 Timelock [TSsGkp7EWDV1HdC9tgjsDiobFpJwEYYTYz](https://nile.tronscan.org/#/contract/TSsGkp7EWDV1HdC9tgjsDiobFpJwEYYTYz)
 
-jumpRate TRX JumpRateModelV2 [TULa2nWyFvJiPbvogDJUtzU6b9KDHFzBvz](https://nile.tronscan.org/#/contract/TULa2nWyFvJiPbvogDJUtzU6b9KDHFzBvz)
+jumpRate TRX JumpRateModelV2 [TCvVDLi9YfuvcMNM8T4WogxDiPkXsEDJVa](https://nile.tronscan.org/#/contract/TCvVDLi9YfuvcMNM8T4WogxDiPkXsEDJVa)
+
+<!-- jumpRate TRX JumpRateModelV2 [TULa2nWyFvJiPbvogDJUtzU6b9KDHFzBvz](https://nile.tronscan.org/#/contract/TULa2nWyFvJiPbvogDJUtzU6b9KDHFzBvz) -->
 
 jumpRate URZ JumpRateModelV2 [THEUD8rfAkmeUgSJs8X8zN6wqNYDG71iPx](https://nile.tronscan.org/#/contract/THEUD8rfAkmeUgSJs8X8zN6wqNYDG71iPx)
 
@@ -43,15 +45,27 @@ jumpRate USDT JumpRateModelV2 [TRWMtAJPFuDzfHW4itx29kzZs91eXojXaf](https://nile.
 TRX CEther [TGjZXu9amnEfiUy3W8Z1ptxKnTVs6cb9vv](https://nile.tronscan.org/#/contract/TGjZXu9amnEfiUy3W8Z1ptxKnTVs6cb9vv)
 
 <!-- URZ CErc20Delegate [TMUBbv9aEauXNmga1wU3rwKWDgXkWgvRAd](https://nile.tronscan.org/#/contract/TMUBbv9aEauXNmga1wU3rwKWDgXkWgvRAd)
+
 URZ CErc20Delegator [TVxb8THh3V7LKMyamG5tX46Eb5rqxYTCG8](https://nile.tronscan.org/#/contract/TVxb8THh3V7LKMyamG5tX46Eb5rqxYTCG8) -->
 
 URZ CErc20Delegate [TS5aDYKwCZNVyVVQBnRUUnbfU9N7Q9isCY](https://nile.tronscan.org/#/contract/TS5aDYKwCZNVyVVQBnRUUnbfU9N7Q9isCY)
+
 URZ CErc20Delegator [TByuWrmpZQb5yYYtWBrT4Kfhzz3jJ1GQ4E](https://nile.tronscan.org/#/contract/TByuWrmpZQb5yYYtWBrT4Kfhzz3jJ1GQ4E)
 
 USDT CErc20Delegate [TFJWagiFqF7UGv8Wcq4vaKV2n3KCeyXRKQ](https://nile.tronscan.org/#/contract/TFJWagiFqF7UGv8Wcq4vaKV2n3KCeyXRKQ)
+
 USDT CErc20Delegator [TAZh2JdxuiXZrwWoxWSRznpqZgcK1rueXP](https://nile.tronscan.org/#/contract/TAZh2JdxuiXZrwWoxWSRznpqZgcK1rueXP)
 
 PriceOracle [TMDVSLJ4gmzxmZ87YDLeVBsxQizf9aSFaA](https://nile.tronscan.org/#/contract/TMDVSLJ4gmzxmZ87YDLeVBsxQizf9aSFaA)
-PriceOracleProxy [TAaT2kumYb9vP4DGaK8CCktj6XAwWKbY12](https://nile.tronscan.org/#/contract/TAaT2kumYb9vP4DGaK8CCktj6XAwWKbY12)
+
+<!-- PriceOracleProxy [TAaT2kumYb9vP4DGaK8CCktj6XAwWKbY12](https://nile.tronscan.org/#/contract/TAaT2kumYb9vP4DGaK8CCktj6XAwWKbY12) -->
+
+PriceOracleProxy [TP5e3UYcczAy4djF6GpLBCF1KzSDnxwaho](https://nile.tronscan.org/#/contract/TP5e3UYcczAy4djF6GpLBCF1KzSDnxwaho)
 
 UruzLens [TB7ictoxTENyjCA2RmDwN8XfF635zZthfF](https://nile.tronscan.org/#/contract/TB7ictoxTENyjCA2RmDwN8XfF635zZthfF)
+
+<!-- ProposalUrzCollateralFactor [TJ9mytCWyxV81ivn2a4QMcbEGfpQyM76KB](https://nile.tronscan.org/#/contract/TJ9mytCWyxV81ivn2a4QMcbEGfpQyM76KB) -->
+
+<!-- ProposalUrzCollateralFactor [TTv9UEgMDbevDWdFCUbxvvWchuMQgJNJaG](https://nile.tronscan.org/#/contract/TTv9UEgMDbevDWdFCUbxvvWchuMQgJNJaG) -->
+
+ProposalUrzCollateralFactor [TQZp7zvXC5vKyvYgNjR34c4TEEtMrUfTC5](https://nile.tronscan.org/#/contract/TQZp7zvXC5vKyvYgNjR34c4TEEtMrUfTC5)

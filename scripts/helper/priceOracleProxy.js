@@ -1,12 +1,12 @@
 const { nile } = require("../utils/tronWeb");
 const {
   oracleV1: oracleV1Address,
-  oracle: oracleAddress,
+  oracleProxy: oracleProxyAddress,
 } = require("../../data/test-oracle.json");
 
 const getPriceOracleContract = async () => {
   const v1 = await nile.contract().at(oracleV1Address);
-  const proxy = await nile.contract().at(oracleAddress);
+  const proxy = await nile.contract().at(oracleProxyAddress);
   return {
     v1,
     proxy,
@@ -21,16 +21,16 @@ const getPrice = async (proxy, cToken) => {
 const getPrices = async (proxy) => {
   let cAssets = [
     {
-      address: "TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW", // TRX CEther address
-      name: "cEther",
-    },
-    {
-      address: "TVxb8THh3V7LKMyamG5tX46Eb5rqxYTCG8", // uURZ Delegator address
-      name: "uURZ",
+      address: "TGjZXu9amnEfiUy3W8Z1ptxKnTVs6cb9vv", // TRX CEther address
+      name: "uTRX",
     },
     {
       address: "TAZh2JdxuiXZrwWoxWSRznpqZgcK1rueXP", // uUSDT Delegator address
       name: "uUSDT",
+    },
+    {
+      address: "TByuWrmpZQb5yYYtWBrT4Kfhzz3jJ1GQ4E", // uUSDT Delegator address
+      name: "uURZ",
     },
   ];
 
@@ -53,11 +53,15 @@ const getSaiPrice = async (proxy) => {
 const main = async () => {
   try {
     const { proxy } = await getPriceOracleContract();
+
     const prices = await getPrices(proxy);
-    console.log(`Asset Prices: ${JSON.stringify(prices)}`);
+    console.log(prices);
 
     // const saiPrice = await getSaiPrice(proxy);
     // console.log(`Sai Price: ${saiPrice}`);
+
+    // const price = await getPrice(proxy, CEther.address);
+    // console.log(price);
   } catch (error) {
     console.log(error);
   }

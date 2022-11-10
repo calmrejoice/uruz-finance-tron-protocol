@@ -1,17 +1,8 @@
 const { nile } = require("./utils/tronWeb");
 const trxOption = require("./utils/trx");
-
-const {
-  unitroller: comptrollerAddress,
-} = require("../data/test-comptroller.json");
-const { oracle: oracleAddress } = require("../data/test-oracle.json");
-// const {
-//   CErc20Delegator,
-//   CEther,
-//   tokenConfig,
-// } = require("../data/test-tokens.json");
 const { abi: comptrollerAbi } = require("../build/contracts/Comptroller.json");
-const { CErc20Delegator } = require("../data/tokensData");
+const { CErc20Delegator, CEther, tokenConfig } = require("../data/tokensData");
+const config = require("../config");
 
 const getComptrollerContract = async (unitroller, abi) => {
   return await nile.contract(abi, unitroller);
@@ -67,46 +58,54 @@ const setSeizePaused = async (contract, state) => {
 
 const main = async () => {
   const comptrollerContract = await getComptrollerContract(
-    comptrollerAddress,
+    config.address.unitroller,
     comptrollerAbi
   );
+  try {
+    // // Set Comptroller Basic Setting
+    // console.log(
+    //   JSON.stringify(await setPriceOracle(comptrollerContract, oracleAddress))
+    // );
+    // console.log(await setMaxAssets(comptrollerContract, 10));
+    // console.log(
+    //   await setLiquidationIncentive(comptrollerContract, "1080000000000000000")
+    // );
+    // console.log(await setCloseFactor(comptrollerContract, "500000000000000000"));
 
-  // // Set Comptroller Basic Setting
-  // console.log(
-  //   JSON.stringify(await setPriceOracle(comptrollerContract, oracleAddress))
-  // );
-  // console.log(await setMaxAssets(comptrollerContract, 10));
-  // console.log(
-  //   await setLiquidationIncentive(comptrollerContract, "1080000000000000000")
-  // );
-  // console.log(await setCloseFactor(comptrollerContract, "500000000000000000"));
+    // Add Tokens
+    // const cTokens = [...CErc20Delegator, CEther.address];
+    // const addMarketsPromise = cTokens.map(async (t) => {
+    //   return await addMarket(comptrollerContract, t);
+    // });
+    // await Promise.all(addMarketsPromise);
 
-  // Add Tokens
-  // const cTokens = [...CErc20Delegator, CEther.address];
-  // const addMarketsPromise = cTokens.map(async (t) => {
-  //   return await addMarket(comptrollerContract, t);
-  // });
-  // await Promise.all(addMarketsPromise);
+    // await addMarket(comptrollerContract, CErc20Delegator[0]);
+    // const res = await addMarket(comptrollerContract, CEther.address);
+    // console.log(res);
 
-  await addMarket(comptrollerContract, CErc20Delegator[0]);
+    //  Set CollateralFactor Individually
+    const res = await setCollateralFactor(
+      comptrollerContract,
+      config.address.uurz,
+      (0.5 * 10 ** 18).toString()
+    );
+    console.log(res);
 
-  // // Set CollateralFactor Individually
-  // console.log(
-  //   await setCollateralFactor(
-  //     comptrollerContract,
-  //     CEther.address,
-  //     CEther.collateralFactor
-  //   )
-  // );
-  // for (let i = 0; i < CErc20Delegator.length; i++) {
-  //   console.log(
-  //     await setCollateralFactor(
-  //       comptrollerContract,
-  //       CErc20Delegator[i],
-  //       tokenConfig[i].collateralFactor
-  //     )
-  //   );
-  // }
+    // for (let i = 0; i < CErc20Delegator.length; i++) {
+    //   console.log(
+    //     await setCollateralFactor(
+    //       comptrollerContract,
+    //       CErc20Delegator[i],
+    //       tokenConfig[i].collateralFactor
+    //     )
+    //   );
+    // }
+
+    // Set Price Oracle
+    // console.log(await setPriceOracle(comptrollerContract, oracleProxy));
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 main();

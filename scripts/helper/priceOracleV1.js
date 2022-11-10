@@ -1,15 +1,15 @@
 const { nile } = require("../utils/tronWeb");
 const { tokens } = require("../../data/test-tokens.json");
-const { oracleV1: oracleV1Address } = require("../../data/test-oracle.json");
+const config = require("../../config");
 
-const getPriceOracleV1Contract = async () => {
-  return await nile.contract().at(oracleV1Address);
-};
-
-const getPrice = async (underlying) => {
-  const contract = await getPriceOracleV1Contract();
-  const result = await contract.assetPrices(underlying).call();
-  return result.toString();
+const getPrice = async (utokenAddress) => {
+  try {
+    const contract = await nile.contract().at(config.address.oracleV1);
+    const result = await contract.getPrice(utokenAddress).call();
+    console.log(result.toString());
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const getPrices = async () => {
@@ -46,36 +46,20 @@ const getPrices = async () => {
   return finalResult;
 };
 
-const setPrice = async (underlying, price) => {
-  // TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW, 0.0622 * 10 ** 18
-  const contract = await getPriceOracleV1Contract();
-  const result = await contract.setPrice(underlying, price).send();
-  console.log(result);
-};
-
-const setPrices = async (assetsAddress, price) => {
-  const contract = await getPriceOracleV1Contract();
-  await contract.setPrices(assetsAddress, price).send();
+const setPrice = async (utokenAddress, price) => {
+  try {
+    const contract = await nile.contract().at(config.address.oracleV1);
+    const result = await contract.setPrice(utokenAddress, price).send();
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const main = async () => {
-  // const prices = await getPrices();
-  // console.log(JSON.stringify(prices));
-  const tempPrice = (0.0673 * 10 ** 18).toString();
-  // const cEtherPrice = (1 * 10 ** 18).toString();
-  // console.log(cEtherPrice);
-  await setPrice("TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW", tempPrice);
-
-  const price = await getPrice("TWq5LYhAqPGweCyt6arYQ9rWcXYoj33sAW");
-  console.log(price);
+  const price = (0.0673 * 10 ** 18).toString();
+  await setPrice(config.address.uurz, price);
+  await getPrice(config.address.uurz);
 };
 
 main();
-
-module.exports = {
-  getPriceOracleV1Contract,
-  getPrice,
-  getPrices,
-  setPrice,
-  setPrices,
-};

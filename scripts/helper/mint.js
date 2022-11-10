@@ -8,7 +8,7 @@ const { ethers } = require("ethers");
 const supply = async () => {
   try {
     const contract = await nile.contract().at(CErc20Delegator[0]);
-    const noOfTokens = (1 * 10 ** 18).toString();
+    const noOfTokens = (1 * 10 ** 18).toString;
     // const noOfTokens = ethers.BigNumber.from((1 * 10 ** 18).toString());
     console.log(noOfTokens);
     const result = await contract.mint(noOfTokens).send(trxOption);

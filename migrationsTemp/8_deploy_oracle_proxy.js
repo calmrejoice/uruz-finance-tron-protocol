@@ -1,8 +1,4 @@
-const {
-  tokens,
-  CErc20Delegator: CErc20DelegatorAddress,
-  CEther,
-} = require("../data/test-tokens.json");
+const { CEther } = require("../data/tokensData");
 const { oracleV1: oracleV1Address } = require("../data/test-oracle.json");
 const PriceOracleProxy = artifacts.require("./PriceOracleProxy.sol");
 

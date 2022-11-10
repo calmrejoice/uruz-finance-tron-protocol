@@ -3,30 +3,27 @@ const { ethers } = require("ethers");
 const { nile } = require("../utils/tronWeb");
 const calculator = require("../utils/calculator");
 
-const {
-  cEther: cEtherInterestRateAddress,
-  cDai: cDaiInterestRateAddress,
-} = require("../../../data/test-interest-rate.json");
+const config = require("../../config");
 
 const getInterestRateContract = async () => {
+  const trxInterestRateAddress = config.address.trxInterestRate;
+  const urzInterestRateAddress = config.address.urzInterestRate;
   return {
-    cEtherInterestRateModel: await nile
-      .contract()
-      .at(cEtherInterestRateAddress),
-    cDaiInterestRateModel: await nile.contract().at(cDaiInterestRateAddress),
+    trxInterestRateModel: await nile.contract().at(trxInterestRateAddress),
+    urzInterestRateModel: await nile.contract().at(urzInterestRateAddress),
   };
 };
 
 const getParams = async () => {
-  const { cEtherInterestRateModel, cDaiInterestRateModel } =
+  const { trxInterestRateModel, urzInterestRateModel } =
     await getInterestRateContract();
-  let baseRate = await cEtherInterestRateModel.baseRatePerBlock().call();
-  let blocksPerYear = await cEtherInterestRateModel.blocksPerYear().call();
-  let multiplierPerBlock = await cEtherInterestRateModel
+  let baseRate = await trxInterestRateModel.baseRatePerBlock().call();
+  let blocksPerYear = await trxInterestRateModel.blocksPerYear().call();
+  let multiplierPerBlock = await trxInterestRateModel
     .multiplierPerBlock()
     .call();
 
-  const cEtherData = {
+  const trxData = {
     baseRatePerYear: calculator
       .getBaseRatePerYear(baseRate, blocksPerYear)
       .toString(),
@@ -40,15 +37,15 @@ const getParams = async () => {
       .toString(),
   };
 
-  baseRate = await cDaiInterestRateModel.baseRatePerBlock().call();
-  blocksPerYear = await cDaiInterestRateModel.blocksPerYear().call();
-  multiplierPerBlock = await cDaiInterestRateModel.multiplierPerBlock().call();
-  jumpMultiplierPerBlock = await cDaiInterestRateModel
+  baseRate = await urzInterestRateModel.baseRatePerBlock().call();
+  blocksPerYear = await urzInterestRateModel.blocksPerYear().call();
+  multiplierPerBlock = await urzInterestRateModel.multiplierPerBlock().call();
+  jumpMultiplierPerBlock = await urzInterestRateModel
     .jumpMultiplierPerBlock()
     .call();
-  kink = await cDaiInterestRateModel.kink().call();
+  kink = await urzInterestRateModel.kink().call();
 
-  const cDaiData = {
+  const urzData = {
     baseRatePerYear: calculator
       .getBaseRatePerYear(baseRate, blocksPerYear)
       .toString(),
@@ -63,18 +60,18 @@ const getParams = async () => {
   };
 
   const result = {
-    cEtherInterestRate: cEtherData,
-    cDaiInterestRate: cDaiData,
+    trxInterestRate: trxData,
+    urzInterestRate: urzData,
   };
   console.log(`InterestRateModel Params: ${JSON.stringify(result)}`);
   return result;
 };
 
-// const main = async () => {
-//     await getParams();
-// }
+const main = async () => {
+  await getParams();
+};
 
-// main();
+main();
 
 module.exports = {
   getInterestRateContract,

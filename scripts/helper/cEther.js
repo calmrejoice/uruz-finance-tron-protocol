@@ -1,7 +1,7 @@
 // const { ethers } = require('ethers');
-const { nile } = require("./utils/tronWeb");
+const { nile } = require("../utils/tronWeb");
 
-const { CEther: cEtherData } = require("../../data/test-tokens.json");
+const { CEther: cEtherData } = require("../../data/tokensData");
 
 const getCEtherContract = async () => {
   return await nile.contract().at(cEtherData.address);
@@ -25,11 +25,11 @@ const getParams = async () => {
   return result;
 };
 
-// const main = async () => {
-//     await getParams();
-// }
+const main = async () => {
+  await getParams();
+};
 
-// main();
+main();
 
 module.exports = {
   getCEtherContract,

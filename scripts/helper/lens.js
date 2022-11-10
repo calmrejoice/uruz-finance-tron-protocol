@@ -1,7 +1,6 @@
-const { lens } = require("../../data/test-lens.json");
 const { nile } = require("../utils/tronWeb");
 const trxOption = require("../utils/trx");
-const { CEther } = require("../../data/test-tokens.json");
+const config = require("../../config");
 
 const getUTokenMetadata = async () => {
   try {
@@ -15,12 +14,20 @@ const getUTokenMetadata = async () => {
   }
 };
 
+const getAccountLimits = async () => {
+  try {
+    const contract = await nile.contract().at(config.address.lens);
+    const accountLimits = await contract
+      .getAccountLimits(config.address.unitroller, config.address.account)
+      .send(trxOption);
+    console.log(accountLimits);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const main = async () => {
-  await getUTokenMetadata();
+  getAccountLimits();
 };
 
 main();
-
-module.exports = {
-  getUTokenMetadata,
-};
