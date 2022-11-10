@@ -1,20 +1,4 @@
-### 1. Deploy contract using TronBox
-
-Compile contract:
-
-```
-tronbox compile
-```
-
-Deploy contract:
-
-```
-tronbox migrate --reset --network nile
-```
-
-On successful deploy, copy the `contract address`
-
-### Source Code
+### Contract Addresses
 
 Here are the deployed contract addresses:
 
